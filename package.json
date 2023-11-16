@@ -1,0 +1,19 @@
+{
+  "name": "cendash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "node-sass": "sass -w scss/:dist/css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

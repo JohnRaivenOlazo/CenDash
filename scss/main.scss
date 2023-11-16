@@ -1,0 +1,19 @@
+$primary-color: #f88105;
+$secondary-color: #820d0f;
+$accent-color: #f8ca96;
+$danger-color: #b0160c;
+$dark-color: #57080c;
+
+$text-color: #333;
+$light-text-color: #fff;
+
+$bg-color: #f5f5f5;
+$dark-bg-color: #333;
+
+body{
+    background-color: $primary-color;
+}
+
+div {
+    background-color: red;
+}
