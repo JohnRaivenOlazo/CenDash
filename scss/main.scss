@@ -67,7 +67,6 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     background: linear-gradient(to right, $primary-color, $secondary-color);
-    -webkit-background-clip: text;
     color: transparent;
     margin: 0; /* Remove any default margin */
     padding: 10px; /* Adjust the padding as needed */
