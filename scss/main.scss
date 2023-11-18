@@ -10,12 +10,14 @@ $light-text-color: #fff;
 $bg-color: #0F172A;
 $color: #F1F5F9;
 
-$linear-gradient: linear-gradient(to right, #ff751c, #fe8d41);
+$linear-gradient: linear-gradient(to right, #e3513f, #ed602b);
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap');
 
-
+body{
+    background: $linear-gradient;
+}
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 12px;
@@ -64,6 +66,14 @@ $linear-gradient: linear-gradient(to right, #ff751c, #fe8d41);
     display: flex;
     align-items: center;
     gap: 5px;
+    padding: 0.5rem;
+    background-color: #dd13a057;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav_landing-page.active .nav-logo-container{
+    background: none;
 }
 
 
@@ -86,9 +96,22 @@ $linear-gradient: linear-gradient(to right, #ff751c, #fe8d41);
 
 
 .nav-item-container{
+        padding: 1rem;
+        background-color: #dd13a057;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+}
+
+
+
+.nav_landing-page.active .nav-item-container{
+    background: none;
+}
+
+.nav-item-container ul{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .nav-item-container a{
@@ -105,8 +128,7 @@ $linear-gradient: linear-gradient(to right, #ff751c, #fe8d41);
 }
 
 .nav-item-container a:hover{
-    color: #bebebe;
-    border-radius: 20px;
+    color: #dbdbdb;
 }
 
 .burger-container{
@@ -142,71 +164,51 @@ $linear-gradient: linear-gradient(to right, #ff751c, #fe8d41);
 }
 
 .nav-mobile{
-    padding-top: 30px;
-    padding-right: 40px;
     position: fixed;
     display: flex;
-    text-align: right;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
     top: 0;
     right: 0;
-    height: 40%;
-    width: 50%;
-    gap: 10px;
-    transform: translateX(100%);
+    height: 50vh;
+    width: 100%;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(-100%);
     background-color: #f4a04b;
     transition: all 0.3s ease-in-out;
     z-index: -1;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 80px;
-    border-top-left-radius: 80px;
     box-shadow: 4px 4px #e18336; 
 }
 
-.nav-mobile::before{
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    left: 22px;
-    width: 100%;
-    height: 15px;
-    background-color: #3bb24b;
-    border-bottom-left-radius: 100px;
-}
-.nav-mobile::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 7.2px;
-    width: 100%;
-    height: 20px;
-    bottom: 20px;
-    background-color: #ed1c24;
-    border-bottom-left-radius: 100px;
-}
 
 .nav-mobile.active{
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
 .nav-mobile.active.is-active{
-    transform: translateY(-20px);
+    height: 40vh;
+    opacity: 0.8;
+    gap: 0.5rem;
 }
 
 .nav-mobile a{
+    font-family: 'Lexend', sans-serif;
     text-transform: uppercase;
-    font-size: 1.2rem;
-    font-style: italic;
+    font-size: 1.3rem;
     font-weight: 800;
-    color: yellow; 
+    color: $color; 
     text-shadow: 2px 2px 4px #000000;   
     transition: all 0.3s ease;
 }
+.nav-mobile a:first-child{
+    margin-top: 20px;
+}
 
 .nav-mobile a:hover{
-    color: rgb(205, 205, 0);
+    color: #ffab65;
 }
 
 @media screen and (min-width: 768px){
