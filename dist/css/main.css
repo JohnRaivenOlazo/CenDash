@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-body::-webkit-scrollbar {
-  width: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap");
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-body::-webkit-scrollbar-track {
-  background-color: #57080c;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #e3773e, #f7a265);
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: #820d0f;
-  border-radius: 20px;
+::-webkit-scrollbar-track {
+  background-color: #e3773e;
 }
 
 * {
@@ -19,6 +22,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  border-style: none;
 }
 
 .nav_landing-page {
@@ -33,15 +37,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav_landing-page.active {
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(255, 119, 28, 0.2117647059);
   padding: 5px 30px;
+  backdrop-filter: blur(4px); /* Adjust the blur amount as needed */
 }
 
 .nav-logo-container {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-left: 2rem;
 }
 
 .nav-logo-image {
@@ -53,11 +57,8 @@ body::-webkit-scrollbar-thumb {
 .nav-logo-text {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
-  background: linear-gradient(to right, #f88105, #820d0f);
-  -webkit-background-clip: text;
-  color: transparent;
-  margin: 0; /* Remove any default margin */
-  padding: 10px; /* Adjust the padding as needed */
+  color: #F1F5F9;
+  margin: 0; /* Remove any default margin */ /* Adjust the padding as needed */
 }
 
 .nav-logo-text span {
@@ -73,10 +74,9 @@ body::-webkit-scrollbar-thumb {
 .nav-item-container a {
   margin-right: 20px;
   font-size: 1.4rem;
-  color: #fff;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-weight: 1000;
-  text-transform: uppercase;
+  color: #F1F5F9;
+  font-family: "Lexend", sans-serif;
+  font-weight: 200;
   transition: all 0.3s ease;
 }
 
@@ -86,9 +86,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-item-container a:hover {
   color: #bebebe;
-  padding: 10px;
   border-radius: 20px;
-  background-color: #b0160c;
 }
 
 .burger-container {
@@ -207,39 +205,29 @@ body::-webkit-scrollbar-thumb {
   }
 }
 section {
+  height: 100vh;
+}
+
+.header {
   position: relative;
   height: 100vh;
 }
 
-section:nth-child(even) {
-  background: linear-gradient(to right, rgb(59, 33, 5), #f88105);
-}
-
-section:nth-child(odd) {
-  background: linear-gradient(to right, rgb(39, 3, 5), rgb(238, 39, 7));
+.header section {
+  transform-style: preserve-3d;
 }
 
 .header-bg {
-  position: absolute;
   background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
-}
-
-.overlay {
-  position: absolute;
-  width: 60%;
-  height: 100vh;
-  backdrop-filter: blur(10px);
-  opacity: 0.8;
-  z-index: 1;
+  height: 100%;
+  transform: translateZ(-1px);
 }
 
 .header-container {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   display: flex;
   text-align: center;
@@ -252,51 +240,75 @@ section:nth-child(odd) {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 5rem;
   text-align: center;
-  color: #fff;
+  background: linear-gradient(to right, #ffaa7c, #ffbf92);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .header-description {
-  color: #f8ca96;
+  position: absolute;
+  top: 6rem;
+  color: #F1F5F9;
 }
 
-.btn-12 {
-  margin-top: 2rem;
-  margin-left: -8.5rem;
-  border: none;
-  box-shadow: none;
-  width: 130px;
+.button-container {
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+}
+
+.btn-1 {
+  position: absolute;
   line-height: 42px;
 }
 
-.btn-12 span {
-  background: rgb(0, 172, 238);
-  background: linear-gradient(0deg, rgb(0, 172, 238) 0%, rgb(2, 126, 251) 100%);
+.btn-2 {
+  position: absolute;
+  margin-left: 10rem;
+  line-height: 42px;
+}
+
+.btn-1::after {
+  content: "or";
+  font-family: cursive;
+  position: absolute;
+  color: #F1F5F9;
+  left: 8.7rem;
+}
+
+.btn-1 span, .btn-2 span {
+  font-family: cursive;
+  color: #F1F5F9;
+  text-shadow: 1px 1px #000;
+  background-color: #e3773e;
   position: absolute;
   width: 130px;
   height: 40px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  text-align: center;
   transition: all 0.3s;
 }
 
-.btn-12 span:nth-child(1) {
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+.btn-1 span:hover, .btn-2 span:hover {
+  color: #ffc5a7;
+}
+
+.btn-1 span:nth-child(1), .btn-2 span:nth-child(1) {
+  box-shadow: 0 4px 8px rgba(227, 119, 62, 0.4);
   transform: rotateX(90deg);
   transform-origin: 50% 50% -20px;
 }
 
-.btn-12 span:nth-child(2) {
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+.btn-1 span:nth-child(2), .btn-2 span:nth-child(2) {
+  box-shadow: 0 4px 8px rgba(227, 119, 62, 0.4);
   transform: rotateX(0deg);
   transform-origin: 50% 50% -20px;
 }
 
-.btn-12:hover span:nth-child(1) {
+.btn-1:hover span:nth-child(1), .btn-2:hover span:nth-child(1) {
   transform: rotateX(0deg);
 }
 
-.btn-12:hover span:nth-child(2) {
+.btn-1:hover span:nth-child(2), .btn-2:hover span:nth-child(2) {
   color: transparent;
   transform: rotateX(-90deg);
 }
