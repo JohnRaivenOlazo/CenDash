@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "scrollreveal": "^4.0.9",
     "vite": "^5.0.0"
   },
   "devDependencies": {
