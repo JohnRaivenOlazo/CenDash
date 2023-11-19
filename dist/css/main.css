@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
 body {
   background: linear-gradient(to right, #e3513f, #ed602b);
 }
@@ -354,6 +355,32 @@ section {
     transform: translateY(20%) rotate(45deg);
     opacity: 0.7;
   }
+}
+#main-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 130vh;
+  padding: 1rem 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(221, 19, 160, 0.3411764706);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.card:hover {
+  background-color: rgba(253, 1, 178, 0.3411764706);
 }
 
 /*# sourceMappingURL=main.css.map */
