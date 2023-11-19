@@ -191,8 +191,11 @@ body{
 
 .nav-mobile.active.is-active{
     height: 40vh;
-    opacity: 0.95;
+    opacity: 0.7;
     gap: 0.5rem;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        
 }
 
 .nav-mobile a{
