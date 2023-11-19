@@ -37,14 +37,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 20px 20px;
   z-index: 999;
   transition: all 0.3s ease-out;
 }
 
 .nav_landing-page.active {
   background-color: rgba(255, 119, 28, 0.2117647059);
-  padding: 5px 30px;
+  padding: 5px 20px;
   backdrop-filter: blur(4px); /* Adjust the blur amount as needed */
 }
 
@@ -64,15 +64,15 @@ body {
 
 .nav-logo-image {
   justify-content: center;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 .nav-logo-text {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #F1F5F9;
-  margin: 0; /* Remove any default margin */ /* Adjust the padding as needed */
+  margin: 0;
 }
 
 .nav-logo-text span {
@@ -122,7 +122,7 @@ body {
 }
 
 .burger-container .line {
-  width: 25px;
+  width: 23px;
   height: 5px;
   border-radius: 20px;
   background-color: rgb(255, 0, 179);
@@ -179,7 +179,7 @@ body {
 .nav-mobile a {
   font-family: "Lexend", sans-serif;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #F1F5F9;
   text-shadow: 2px 2px 4px #000000;
@@ -197,6 +197,36 @@ body {
   border-radius: 5px;
 }
 
+@media screen and (min-width: 420px) {
+  .nav-logo-image {
+    width: 40px;
+    height: 40px;
+  }
+  .nav-logo-text {
+    font-size: 1.8rem;
+  }
+  .burger-container .line {
+    width: 30px;
+  }
+  .nav-mobile a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .nav-logo-image {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-logo-text {
+    font-size: 2rem;
+  }
+  .burger-container .line {
+    width: 32px;
+  }
+  .nav-mobile a {
+    font-size: 1.3rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav-mobile {
     display: none;
@@ -244,22 +274,21 @@ section {
 
 .header-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
-  background: linear-gradient(to right, #ffaa7c, #ffbf92);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
 }
 
 .header-description {
+  font-size: 0.9rem;
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   color: #F1F5F9;
 }
 
 .button-container {
   position: absolute;
-  top: 10rem;
+  top: 9.5rem;
   left: 2rem;
 }
 
@@ -270,7 +299,7 @@ section {
 
 .btn-2 {
   position: absolute;
-  margin-left: 10rem;
+  margin-left: 7.7rem;
   line-height: 42px;
 }
 
@@ -279,17 +308,18 @@ section {
   font-family: cursive;
   position: absolute;
   color: #F1F5F9;
-  left: 8.7rem;
+  left: 6.3rem;
 }
 
 .btn-1 span, .btn-2 span {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #F1F5F9;
   text-shadow: 1px 1px #000;
   background-color: #e3773e;
   position: absolute;
-  width: 130px;
+  width: 90px;
   height: 40px;
   border-radius: 5px;
   transition: all 0.3s;
@@ -320,13 +350,81 @@ section {
   transform: rotateX(-90deg);
 }
 
+@media screen and (min-width: 420px) {
+  .header-title {
+    font-size: 5rem;
+  }
+  .header-description {
+    font-size: 1.1rem;
+    top: 5.5rem;
+  }
+  .button-container {
+    top: 9.5rem;
+    left: 4rem;
+  }
+  .btn-1 {
+    position: absolute;
+    margin-left: -0.2rem;
+    line-height: 51px;
+  }
+  .btn-2 {
+    position: absolute;
+    margin-left: 8rem;
+    line-height: 51px;
+  }
+  .btn-1::after {
+    font-size: 1rem;
+    left: 6.7rem;
+  }
+  .btn-1 span, .btn-2 span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .header-title {
+    font-size: 6.5rem;
+  }
+  .header-description {
+    font-size: 1.2rem;
+    top: 7rem;
+  }
+  .button-container {
+    top: 11rem;
+    left: 4.3rem;
+  }
+  .btn-1 {
+    position: absolute;
+    margin-left: -0.3rem;
+    line-height: 51px;
+  }
+  .btn-2 {
+    position: absolute;
+    margin-left: 12rem;
+    line-height: 51px;
+  }
+  .btn-1::after {
+    font-size: 1.1rem;
+    left: 9.7rem;
+  }
+  .btn-1 span, .btn-2 span {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 130px;
+    height: 55px;
+    border-radius: 8px;
+  }
+}
 .s1 {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.3em;
+  height: 1.3em;
   background-color: transparent;
   z-index: 80;
   bottom: -11rem;
-  margin-left: -5px;
+  margin-left: -10px;
   position: absolute;
   border-width: 0 0.25em 0.25em 0;
   border-style: solid;
@@ -335,12 +433,12 @@ section {
 }
 
 .s2 {
-  width: 2em;
-  height: 2em;
+  width: 1.8em;
+  height: 1.8em;
   background-color: transparent;
   z-index: 80;
   bottom: -12rem;
-  margin-left: -9px;
+  margin-left: -14px;
   position: absolute;
   border-width: 0 0.25em 0.25em 0;
   border-style: solid;
@@ -362,19 +460,39 @@ section {
     opacity: 0.7;
   }
 }
+@media screen and (min-width: 420px) {
+  .s1 {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .s2 {
+    width: 2em;
+    height: 2em;
+  }
+}
+@media screen and (min-width: 420px) {
+  .s1 {
+    width: 1.7em;
+    height: 1.7em;
+  }
+  .s2 {
+    width: 2.2em;
+    height: 2.2em;
+  }
+}
 #main-title {
   font-family: "Quicksand", sans-serif;
   color: #F1F5F9;
   font-weight: 900;
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   text-shadow: 1px 2px 5px #bb188b;
   text-transform: uppercase;
 }
 
 #main-title span {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
 }
 
 #main-title span::before {
@@ -384,7 +502,7 @@ section {
   width: 100px;
   color: #F1F5F9;
   left: 1px;
-  top: -34px;
+  top: -25px;
 }
 
 #main-title span::after {
@@ -393,8 +511,8 @@ section {
   height: 100px;
   width: 100px;
   color: #F1F5F9;
-  left: 20px;
-  top: -34px;
+  left: 13px;
+  top: -25px;
 }
 
 .about {
@@ -433,14 +551,14 @@ section {
 }
 
 .card-description {
-  text-indent: 10px;
   text-align: left;
   position: relative;
+  font-size: 0.8rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 20px;
   height: 100%;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 0.8rem;
   color: #fff;
   background-color: #942071;
   border-radius: 1rem;
@@ -449,16 +567,124 @@ section {
 }
 
 .card-description span {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
 .card .card-title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
 }
 
+@media screen and (min-width: 420px) {
+  #main-title {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-shadow: 1px 2px 5px #bb188b;
+    text-transform: uppercase;
+  }
+  #main-title span {
+    position: relative;
+    font-size: 2.3rem;
+  }
+  #main-title span::before {
+    height: 120px;
+    width: 120px;
+    color: #F1F5F9;
+    left: 1px;
+    top: -30px;
+  }
+  #main-title span::after {
+    content: ".";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    color: #F1F5F9;
+    left: 18px;
+    top: -30px;
+  }
+  .about {
+    padding: 1.1rem 1.1rem;
+    height: 150vh;
+  }
+  .about-container {
+    position: relative;
+    border-radius: 50%;
+    background-color: #ff9068;
+    padding: 2rem 1rem;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    height: auto;
+    padding: 1rem;
+  }
+  .card-description {
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 0.8rem;
+  }
+  .card-description span {
+    font-size: 1.3rem;
+  }
+  .card .card-title {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  #main-title {
+    margin-top: 20px;
+    font-size: 3rem;
+    text-shadow: 1px 2px 5px #bb188b;
+    text-transform: uppercase;
+  }
+  #main-title span {
+    position: relative;
+    font-size: 3.5rem;
+  }
+  #main-title span::before {
+    height: 140px;
+    width: 140px;
+    left: 2px;
+    top: -45px;
+  }
+  #main-title span::after {
+    height: 140px;
+    width: 140px;
+    left: 28px;
+    top: -45px;
+  }
+  .about {
+    padding: 1.1rem 1.1rem;
+    height: 150vh;
+  }
+  .about-container {
+    position: relative;
+    border-radius: 50%;
+    background-color: #ff9068;
+    padding: 2rem 1rem;
+    height: 150vh;
+  }
+  .card {
+    height: auto;
+    padding: 1rem;
+  }
+  .card-description {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 0.8rem;
+  }
+  .card-description span {
+    font-size: 1.3rem;
+  }
+  .card .card-title {
+    font-size: 1.4rem;
+  }
+}
 .wave {
   padding-right: 5px;
   animation-name: wave-animation;
