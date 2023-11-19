@@ -480,6 +480,10 @@ section {
     height: 2.2em;
   }
 }
+.main {
+  position: relative;
+}
+
 #main-title {
   font-family: "Quicksand", sans-serif;
   color: #F1F5F9;
@@ -721,6 +725,7 @@ section {
   }
 }
 .features {
+  position: relative;
   height: 300vh;
 }
 
@@ -803,6 +808,7 @@ section {
 }
 
 .services {
+  position: relative;
   height: 300vh;
   padding: 4rem 1rem;
   background: url("/assets/images/central_market.jpg");
@@ -922,6 +928,21 @@ form button {
 }
 form button:hover {
   background-color: #f8ca96;
+}
+
+.footer-section {
+  position: relative;
+  padding: 25px 20px;
+  background: #202020;
+}
+
+.copyright-text p {
+  font-size: 14px;
+  color: #878787;
+}
+
+.copyright-text p a {
+  color: #ff5e14;
 }
 
 /*# sourceMappingURL=main.css.map */

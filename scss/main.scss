@@ -554,7 +554,9 @@ section{
 }
 // ========================================================================== //
 // ABOUT
-
+.main{
+    position: relative;
+}
 #main-title{
     font-family: 'Quicksand', sans-serif;
     color: $color;
@@ -811,6 +813,7 @@ section{
 
 
 .features{
+    position: relative;
     height: 300vh;
 }
 #features {
@@ -901,6 +904,7 @@ section {
     height: 200vh;
 }
 .services {
+    position: relative;
     height: 300vh;
     padding: 4rem 1rem;
     background: url("/assets/images/central_market.jpg");
@@ -1030,3 +1034,22 @@ form {
         }
     }
 }
+
+
+// ========================================================================== //
+//FOOTER
+
+.footer-section {
+    position: relative;
+    padding: 25px 20px;
+    background: #202020;
+  }
+
+  .copyright-text p {
+    font-size: 14px;
+    color: #878787;
+  }
+  .copyright-text p a {
+    color: #ff5e14;
+  }
+  
