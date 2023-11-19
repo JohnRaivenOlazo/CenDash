@@ -150,12 +150,11 @@ body {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  top: 0;
+  top: -5px;
   right: 0;
   height: 50vh;
   width: 100%;
   gap: 1rem;
-  opacity: 0;
   transform: translateY(-100%);
   background-color: #f4a04b;
   transition: all 0.3s ease;
