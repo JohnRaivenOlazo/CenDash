@@ -165,15 +165,13 @@ body {
 
 .nav-mobile.active {
   transform: translateY(0);
-  background-color: rgba(244, 159, 75, 0.5490196078);
+  transition: all 0.3s ease;
 }
 
 .nav-mobile.active.is-active {
   height: 40vh;
-  opacity: 0.7;
+  background-color: rgba(244, 159, 75, 0.5490196078);
   gap: 0.5rem;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 .nav-mobile a {

@@ -186,16 +186,13 @@ body{
 
 .nav-mobile.active{
     transform: translateY(0);
-    background-color: #f49f4b8c;
+    transition: all 0.3s ease;
 }
 
 .nav-mobile.active.is-active{
     height: 40vh;
-    opacity: 0.7;
+    background-color: #f49f4b8c;
     gap: 0.5rem;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        
 }
 
 .nav-mobile a{
