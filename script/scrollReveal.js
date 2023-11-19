@@ -21,16 +21,16 @@ sr.reveal('.top-2',{
   reset: true
 });
 
-sr.reveal('.bottom-min-delay',{
+sr.reveal('.top-min-delay',{
   delay: 0,
   duration: 1500,
   distance: "20px",
-  origin: "bottom",
+  origin: "top",
   reset: true
 });
 
 sr.reveal('.left-min-delay', {
-  delay: 50,
+  delay: 250,
   duration: 1000,
   distance: "50px",
   origin: "left",
@@ -38,7 +38,7 @@ sr.reveal('.left-min-delay', {
 });
 
 sr.reveal('.right-min-delay', {
-  delay: 50,
+  delay: 250,
   duration: 1000,
   distance: "50px",
   origin: "right",
@@ -46,7 +46,7 @@ sr.reveal('.right-min-delay', {
 });
 
 sr.reveal('.bottom-min-delay', {
-  delay: 50,
+  delay: 250,
   duration: 1000,
   opacity: 0,
   distance: "50px",
