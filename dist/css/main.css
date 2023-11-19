@@ -126,6 +126,7 @@ body {
   border-radius: 20px;
   background-color: #fff;
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .burger-container.active .line:nth-child(1) {
@@ -133,7 +134,7 @@ body {
 }
 
 .burger-container.active .line:nth-child(2) {
-  display: none;
+  opacity: 0%;
 }
 
 .burger-container.active .line:nth-child(3) {
