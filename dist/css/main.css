@@ -170,7 +170,6 @@ body {
 
 .nav-mobile.active.is-active {
   height: 40vh;
-  opacity: 0.9;
   gap: 0.5rem;
 }
 
