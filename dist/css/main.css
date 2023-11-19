@@ -720,5 +720,208 @@ section {
     transform: rotate(0deg);
   }
 }
+.features {
+  height: 300vh;
+}
+
+#features {
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #e3513f, #ed602b); /* Adjusted background color for better contrast */
+}
+
+#features h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#features p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f86969; /* Adjusted background color for feature cards */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.feature-card img {
+  width: 80px; /* Adjusted icon size for better alignment */
+  margin-bottom: 1rem;
+}
+.feature-card h2 {
+  font-family: "Quicksand", sans-serif;
+  color: #f8ca96;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.feature-card p {
+  font-size: 1rem;
+  color: #fff;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+.cta-button .button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F1F5F9;
+  background-color: #f8ca96;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.cta-button .button:hover {
+  background-color: #f5b266;
+}
+
+section {
+  height: 200vh;
+}
+
+.services {
+  height: 300vh;
+  padding: 4rem 1rem;
+  background: url("/assets/images/central_market.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect for DIV 3 */
+  min-height: 600px;
+}
+
+.services-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  margin-top: 100vh;
+  left: 0;
+  right: 0;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 20px;
+  z-index: 999;
+  cursor: default;
+  color: #fff;
+} /* Add the blur effect */
+#services h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#services p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#services h2 {
+  font-family: "Quicksand", sans-serif;
+  color: #f8ca96;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+#services p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#contact {
+  margin: 50px;
+  position: relative;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  height: 100vh;
+  background-color: #b0160c;
+}
+
+#contact h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#contact p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #57080c;
+  color: #fff;
+}
+form button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f5b266;
+  color: #F1F5F9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+form button:hover {
+  background-color: #f8ca96;
+}
 
 /*# sourceMappingURL=main.css.map */
