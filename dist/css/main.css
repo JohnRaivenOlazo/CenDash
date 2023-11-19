@@ -125,20 +125,22 @@ body {
   width: 25px;
   height: 5px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: rgb(255, 0, 179);
+  box-shadow: 1px 1px #000;
   transition: all 0.3s ease;
 }
 
 .burger-container.active .line:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 6px);
+  transform: rotate(40deg) translate(9px, 6px);
 }
 
 .burger-container.active .line:nth-child(2) {
   background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
 }
 
 .burger-container.active .line:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -5px);
+  transform: rotate(-40deg) translate(8px, -5px);
 }
 
 .nav-item-container {
@@ -157,7 +159,7 @@ body {
   width: 100%;
   gap: 1rem;
   transform: translateY(-100%);
-  background-color: #f4a04b;
+  background-color: #e3773e;
   z-index: -1;
   box-shadow: 4px 4px #e18336;
   transition: all 0.3s ease;
@@ -182,14 +184,17 @@ body {
   color: #F1F5F9;
   text-shadow: 2px 2px 4px #000000;
   transition: all 0.3s ease;
+  padding: 3px 0;
 }
 
 .nav-mobile a:first-child {
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 .nav-mobile a:hover {
+  background-color: rgba(255, 183, 124, 0.4392156863);
   color: #ffab65;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -363,8 +368,36 @@ section {
 #main-title {
   font-family: "Quicksand", sans-serif;
   color: #F1F5F9;
-  font-weight: 800;
+  font-weight: 900;
+  margin-top: 20px;
   font-size: 2rem;
+  text-shadow: 1px 2px 5px #bb188b;
+  text-transform: uppercase;
+}
+
+#main-title span {
+  position: relative;
+  font-size: 2.5rem;
+}
+
+#main-title span::before {
+  content: ".";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  color: #F1F5F9;
+  left: 1px;
+  top: -34px;
+}
+
+#main-title span::after {
+  content: ".";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  color: #F1F5F9;
+  left: 20px;
+  top: -34px;
 }
 
 .about {
@@ -378,7 +411,7 @@ section {
   border-radius: 50%;
   background-color: #ff9068;
   padding: 2rem 1rem;
-  height: 140vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -386,8 +419,9 @@ section {
 }
 
 .card {
-  height: 13rem;
+  height: auto;
   display: flex;
+  text-align: center;
   flex-direction: column;
   color: #fff;
   background-color: #bb188b;
@@ -402,6 +436,8 @@ section {
 }
 
 .card-description {
+  text-indent: 10px;
+  text-align: left;
   position: relative;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 20px;
@@ -416,13 +452,50 @@ section {
 }
 
 .card-description span {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 800;
 }
 
 .card .card-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.wave {
+  padding-right: 5px;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

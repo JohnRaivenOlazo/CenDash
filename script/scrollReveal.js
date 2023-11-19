@@ -30,7 +30,7 @@ sr.reveal('.top-min-delay',{
 });
 
 sr.reveal('.left-min-delay', {
-  delay: 250,
+  delay: 0,
   duration: 1000,
   distance: "50px",
   origin: "left",
@@ -38,15 +38,15 @@ sr.reveal('.left-min-delay', {
 });
 
 sr.reveal('.right-min-delay', {
-  delay: 250,
+  delay: 0,
   duration: 1000,
-  distance: "50px",
+  distance: "20px",
   origin: "right",
   reset: true,
 });
 
 sr.reveal('.bottom-min-delay', {
-  delay: 250,
+  delay: 0,
   duration: 1000,
   opacity: 0,
   distance: "50px",
