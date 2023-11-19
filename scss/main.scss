@@ -47,6 +47,7 @@ body{
 
 .nav_landing-page{
     position: fixed;
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -177,9 +178,9 @@ body{
     gap: 1rem;
     transform: translateY(-100%);
     background-color: #f4a04b;
-    transition: all 0.3s ease;
     z-index: -1;
     box-shadow: 4px 4px #e18336; 
+    transition: all 0.3s ease;
 }
 
 
@@ -232,19 +233,23 @@ body{
 
 section{
     height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 
 // ========================================================================== //
 // HEADER
 
+.main{
+}
 .header{
     position: relative;
     height: 100vh;
 }
 
 .header section{
-    transform-style: preserve-3d;
+    padding-top: 0;
 }
 .header-bg{
     background-size: cover;
@@ -397,26 +402,70 @@ section{
 
 #main-title{
     font-family: 'Quicksand', sans-serif;
+    color: $color;
     font-weight: 800;
     font-size: 2rem;
 }
 .about{
+    overflow-x: hidden;
+    position: relative;
+padding: 1rem 1rem;
+height: 150vh;
+}
+.about-container {
+    position: relative;
+    border-radius: 50%;
+    background-color: #ff9068;
+    padding: 2rem 1rem;
+    height: 140vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 130vh;
-    padding: 1rem 1.5rem;
 }
 
-.card{
+
+.card {
+    text-align: center;
+    height: 15rem;
     display: flex;
     flex-direction: column;
-    background-color: #dd13a057;
-    padding: 1rem;
-    border-radius: 2rem;
+    color: #fff;
+    background-color: #bb188b; // Adjusted color for a more vibrant look
+    padding: 1rem; // Increased padding for more spacing
+    border-radius: 1rem; // Reduced border-radius for a softer edge
+    box-shadow: 0 4px 8px rgba(253, 1, 178, 0.4); // Added box shadow for depth
+    transition: all 0.3s ease-in-out; // Added transition for hover effect
+
+    &:hover {
+        transform: scale(1.02); // Scale up on hover for a subtle effect
+        background-color: #fd01b257;
+    }
 }
 
-.card:hover{
-    background-color: #fd01b257;
+.card-description{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    padding-top: 0.2rem;
+    color: #fff;
+    background-color: #942071; // Adjusted color for a more vibrant look // Increased padding for more spacing
+    border-radius: 1rem; // Reduced border-radius for a softer edge
+    box-shadow: 0 4px 8px rgba(253, 1, 178, 0.4); // Added box shadow for depth
+    transition: all 0.3s ease-in-out; // Added transition for hover effect
+}
+
+.card-description:nth-child(2){
+    gap: 20px;
+    
+}
+
+.card .card-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
 }
