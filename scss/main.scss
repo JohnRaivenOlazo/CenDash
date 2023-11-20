@@ -597,7 +597,6 @@ section{
     border-radius: 50%;
     background-color: #ff9068;
     padding: 2rem 1rem;
-    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -689,7 +688,7 @@ section{
         border-radius: 50%;
         background-color: #ff9068;
         padding: 2rem 1rem;
-        height: 150vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -755,7 +754,7 @@ section{
         border-radius: 50%;
         background-color: #ff9068;
         padding: 2rem 1rem;
-        height: 150vh;
+        height: 100%;
     }
     
     .card {
