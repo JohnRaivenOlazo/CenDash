@@ -433,7 +433,7 @@ section{
 
 //DESKTOP
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     .header-container{
         position: absolute;
         left: 22rem;
@@ -531,7 +531,7 @@ section{
     }
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 600px) {
     .s1 {
         width: 1.7em;
         height: 1.7em;
@@ -628,7 +628,7 @@ section{
     font-size: 0.8rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 20px;
-    height: 100%;
+    height: auto;
     align-items: center;
     padding: 0.8rem;
     color: #fff;
@@ -647,6 +647,10 @@ section{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 0.9rem;
+}
+
+.card-background{
+    display: none;
 }
 
 @media screen and (min-width: 420px) {
@@ -706,6 +710,7 @@ section{
         font-size: 1rem;
         margin-top: 20px;
         padding: 0.8rem;
+        height: auto;
     
     }
     
@@ -720,6 +725,7 @@ section{
 }
 
 @media screen and (min-width: 600px) {
+
     #main-title{
         margin-top: 20px;
         font-size: 3rem;
@@ -765,6 +771,7 @@ section{
     }
     
     .card-description{
+        height: auto;
         font-size: 1.2rem;
         margin-top: 20px;
         padding: 0.8rem;
@@ -781,33 +788,146 @@ section{
     
 }
 
+@media screen and (min-width: 768px) {
+    #main-title{
+        margin-top: 20px;
+        font-size: 3rem;
+        text-shadow: 1px 2px 5px #bb188b;
+        text-transform: uppercase;
+    }
+    
+    #main-title span{
+        position: relative;
+        font-size: 3.5rem;
+    }
+    
+    #main-title span::before{
+        height: 140px;
+        width: 140px;
+        left: 2px;
+        top: -45px;
+    }
+    
+    #main-title span::after{
+        height: 140px;
+        width: 140px;
+        left: 28px;
+        top: -45px;
+    }
+
+    .about{
+        padding: 1.1rem 1.1rem;
+        height: auto;
+    }
+    .about-container {
+        position: relative;
+        border-radius: 50%;
+        background-color: #ff9068;
+        gap: 50px;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+    
+    .card {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .card-background {
+        height: auto;
+        width: auto;
+        display: inline-block;
+        background-size: contain;
+        background-position: center;
+        transition: all 0.3s ease;
+
+        &:hover{
+            transform: scale(1.05);
+
+        }
+    }
+
+    .card-content-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 2rem;
+    }
+
+    .card-description{
+        text-align: left;
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 20px;
+        height: auto;
+        align-items: center;
+        padding: 1rem 2rem;
+        color: #fff;
+        background-color: #942071; 
+        border-radius: 1rem; 
+        box-shadow: 0 4px 8px rgba(253, 1, 178, 0.4);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-description p{
+        font-size: 1.5rem;
+    }
+
+    .card-description h1{
+        font-size: 2rem;
+    }
+    
+    .card-description span{
+        font-size: 1.6rem;
+        font-weight: 100;
+    }
+    
+    .card .card-title{
+        font-size: 2rem;
+    }
+    
+}
+
 // ========================================================================== //
 // HAND ANIMATION
 
-.wave {
-    padding-right: 5px;
+.wave::before {
+    content: "👋";
+    font-size: 1.5em; 
+    display: inline-block;
     animation-name: wave-animation;
     animation-duration: 2.5s;      
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
-    display: inline-block;
-  }
-  
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }  
-     20% { transform: rotate(-8.0deg) }
-     30% { transform: rotate(14.0deg) }
-     40% { transform: rotate(-4.0deg) }
-     50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) } 
-    100% { transform: rotate( 0.0deg) }
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0.0deg) }
+    10% { transform: rotate(14.0deg) }  
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate(0.0deg) } 
+    100% { transform: rotate(0.0deg) }
+}
+
+
+  @media screen and (min-width: 768px) {
+    .wave {
+      }
+    
   }
 // ========================================================================== //
 // FEATURES
 
 
 .features{
+    scroll-margin-top: 30px;
     position: relative;
     height: auto;
 }
@@ -879,14 +999,14 @@ section{
         text-align: center;
         text-transform: uppercase;
         color: $color;
-        background-color: $accent-color;
+        background-color: darken($accent-color, 10%);
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease-in-out;
 
         &:hover {
-            background-color: darken($accent-color, 10%);
+            background-color: $accent-color;
         }
     }
 }
@@ -899,6 +1019,7 @@ section {
     height: 200vh;
 }
 .services {
+    scroll-margin-top: -100vh;
     position: relative;
     height: 300vh;
     padding: 4rem 1rem;
@@ -961,6 +1082,7 @@ section {
 // CONTACT
 
 #contact {
+    scroll-margin-top: 50px;
     margin: 50px;
     position: relative;
     padding: 4rem 2rem;
