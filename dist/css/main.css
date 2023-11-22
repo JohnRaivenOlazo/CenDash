@@ -258,7 +258,6 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax Effect*/
-  min-height: 600px;
 }
 
 .header-container {
@@ -773,7 +772,6 @@ section {
   }
   .card-description span {
     font-size: 1.6rem;
-    font-weight: 100;
   }
   .card .card-title {
     font-size: 2rem;
@@ -781,6 +779,7 @@ section {
 }
 .wave::before {
   content: "👋";
+  padding-right: 10px;
   font-size: 1.5em;
   display: inline-block;
   animation-name: wave-animation;
@@ -908,7 +907,6 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax Effect*/
-  min-height: 600px;
 }
 
 .services-container {
@@ -1025,17 +1023,20 @@ form button:hover {
 }
 
 .footer-section {
+  height: auto;
   position: relative;
+  text-align: end;
   padding: 25px 20px;
-  background: #202020;
+  padding-top: 30px;
+  background: linear-gradient(to top, #560204 90%, #e3513f);
 }
 
-.copyright-text p {
+.footer-section p {
   font-size: 14px;
-  color: #878787;
+  color: #F8CB97;
 }
 
-.copyright-text p a {
+.footer-section p a {
   color: #ff5e14;
 }
 

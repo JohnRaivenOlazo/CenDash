@@ -54,8 +54,6 @@ sr.reveal('.bottom-min-delay', {
   reset: true,
 });
 
-
-
 // BOT
 sr.reveal('.bottom',{
   delay: 600,
@@ -66,20 +64,9 @@ sr.reveal('.bottom',{
   reset: true
 });
 
-sr.reveal('#s2',{
-  delay: 125,
-  duration: 1500,
+sr.reveal('.scale',{
   opacity: 0,
-  distance: "50%",
-  origin: "right",
-  reset: true
-});
-
-sr.reveal('#s3',{
-  delay: 175,
-  duration: 1500,
-  opacity: 0,
-  distance: "50%",
-  origin: "bottom",
+  scale: 0.5,
+  duration: 1000,
   reset: true
 });
