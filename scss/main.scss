@@ -295,6 +295,10 @@ section{
 // ========================================================================== //
 // HEADER
 
+.parallax{
+    transition: all 0.3s ease;
+}
+
 .header{
     position: relative;
     height: 100vh;
@@ -306,7 +310,7 @@ section{
     position:absolute;
     top:0;
     left:0;
-    width:100%;
+    width: 100%;
     height: 100vh;
 }
 .header-container{
