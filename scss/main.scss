@@ -778,6 +778,20 @@ section{
         padding: 1rem;
     
     }
+
+    .card-background {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        background-size: contain;
+        background-position: center;
+        transition: all 0.3s ease;
+    
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
     
     .card-description{
         height: auto;
@@ -841,13 +855,14 @@ section{
         height: auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-direction: row;
         padding: 1rem;
     }
 
     .card-background {
+        max-width: 100%;
         height: auto;
-        width: auto;
         display: inline-block;
         background-size: contain;
         background-position: center;
@@ -1100,15 +1115,16 @@ button {
   cursor: pointer;
   font-size: 16px;
   padding: 10px 15px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  color: #222;
-}
-
-button:focus {
-  outline: none;
-}
+    color: #222;
+  }
+  
+  button:focus {
+    outline: none;
+  }
 
 .slider-container .action-buttons button {
   position: absolute;

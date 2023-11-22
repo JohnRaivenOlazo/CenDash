@@ -688,6 +688,17 @@ section {
     height: auto;
     padding: 1rem;
   }
+  .card-background {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    transition: all 0.3s ease;
+  }
+  .card-background:hover {
+    transform: scale(1.05);
+  }
   .card-description {
     height: auto;
     font-size: 1.2rem;
@@ -740,12 +751,13 @@ section {
     height: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     padding: 1rem;
   }
   .card-background {
+    max-width: 100%;
     height: auto;
-    width: auto;
     display: inline-block;
     background-size: contain;
     background-position: center;
@@ -981,6 +993,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   padding: 10px 15px;
+  transition: all 0.3s ease;
 }
 
 button:hover {

@@ -78,3 +78,13 @@ sr.reveal('.opacity',{
   duration: 1500,
   reset: true
 });
+
+
+sr.reveal('.text-reveal',{
+  opacity: 0,
+  duration: 1500,
+  reset: true
+});
+
+
+
