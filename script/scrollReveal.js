@@ -70,3 +70,11 @@ sr.reveal('.scale',{
   duration: 1000,
   reset: true
 });
+
+
+sr.reveal('.opacity',{
+  opacity: 0,
+  scale: 0.8,
+  duration: 1500,
+  reset: true
+});
