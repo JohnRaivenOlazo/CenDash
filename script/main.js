@@ -102,3 +102,24 @@ const shuffleArray = (array) => {
   
 
 // ========================================================================== //
+//PARALAX TEST
+
+window.addEventListener('scroll', function () {
+  // Add parallax scrolling to all images in .paralax-image container
+  document.querySelectorAll('.parallax').forEach(function (element) {
+      // only put top value if the window scroll has gone beyond the top of the image
+      if (element.offsetTop < window.scrollY) {
+          // Get amount of pixels the image is above the top of the window
+          var difference = window.scrollY - element.offsetTop;
+          // Top value of image is set to half the amount scrolled
+          // (this gives the illusion of the image scrolling slower than the rest of the page)
+          var half = (difference / 2) + 'px';
+          var transform = 'translate3d(0, ' + half + ', 0)';
+
+          element.querySelector('img').style.transform = transform;
+      } else {
+          // if image is below the top of the window set top to 0
+          element.querySelector('img').style.transform = 'translate3d(0, 0, 0)';
+      }
+  });
+});
