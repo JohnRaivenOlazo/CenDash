@@ -27,6 +27,7 @@ $linear-gradient: linear-gradient(to right, #e3513f, #ed602b);
 
 body{
     background: $linear-gradient;
+    font-family: 'Lato', sans-serif;
 }
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
@@ -311,7 +312,7 @@ section{
     top:0;
     left:0;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 }
 .header-container{
     position: absolute;
@@ -1026,63 +1027,107 @@ section {
     height: 200vh;
 }
 .services {
-    scroll-margin-top: -100vh;
     position: relative;
-    height: 300vh;
-    padding: 4rem 1rem;
-    background: url("/assets/images/central_market_auto_x2.jpg");
+    height: 100vh;
+    padding: 1rem;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  border-radius: 50px;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+.right-slide div img {
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax Effect*/
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+
 }
 
-.services-container {
-	background-color: rgba(0, 0, 0, 0.1);
-	box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.00);
-	border-radius: 20px;
-    position: relative;
-    text-align: center;
-	margin-top: 100vh;
-	left: 0;
-	right: 0;
-	-webkit-backdrop-filter: blur(20px);
-	backdrop-filter: blur(20px);
-	-webkit-user-select: none;
-	user-select: none;
-	padding: 20px;
-	cursor: default;
-	color: #fff;
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
 }
 
-
-#services h1 {
-    font-family: 'Quicksand', sans-serif;
-    color: $light-text-color;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
+button:hover {
+  color: #222;
 }
 
-#services p {
-    font-size: 1rem;
-    color: $light-text-color;
-    text-align: center;
-    margin-bottom: 3rem;
+button:focus {
+  outline: none;
 }
 
-#services h2 {
-    font-family: 'Quicksand', sans-serif;
-    color: $accent-color;
-    font-size: 1.8rem;
-    margin-top: 2rem;
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
 }
 
-#services p {
-    font-size: 1rem;
-    color: $light-text-color;
-    margin-bottom: 1rem;
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+  
 
 // ========================================================================== //
 // CONTACT
@@ -1093,7 +1138,7 @@ section {
     position: relative;
     padding: 4rem 2rem;
     border-radius: 20px;
-    height: 100vh;
+    height: auto;
     background-color: $danger-color;
 }
 
@@ -1102,7 +1147,7 @@ section {
     color: $light-text-color;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
 

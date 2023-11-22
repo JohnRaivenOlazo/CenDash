@@ -102,24 +102,36 @@ const shuffleArray = (array) => {
   
 
 // ========================================================================== //
-//PARALAX TEST
+// IMAGES
 
-window.addEventListener('scroll', function () {
-  // Add parallax scrolling to all images in .paralax-image container
-  document.querySelectorAll('.parallax').forEach(function (element) {
-      // only put top value if the window scroll has gone beyond the top of the image
-      if (element.offsetTop < window.scrollY) {
-          // Get amount of pixels the image is above the top of the window
-          var difference = window.scrollY - element.offsetTop;
-          // Top value of image is set to half the amount scrolled
-          // (this gives the illusion of the image scrolling slower than the rest of the page)
-          var half = (difference / 2) + 'px';
-          var transform = 'translate3d(0, ' + half + ', 0)';
+const sliderContainer = document.querySelector('.slider-container')
+const slideRight = document.querySelector('.right-slide')
+const slideLeft = document.querySelector('.left-slide')
+const upButton = document.querySelector('.up-button')
+const downButton = document.querySelector('.down-button')
+const slidesLength = slideRight.querySelectorAll('div').length
 
-          element.querySelector('img').style.transform = transform;
-      } else {
-          // if image is below the top of the window set top to 0
-          element.querySelector('img').style.transform = 'translate3d(0, 0, 0)';
-      }
-  });
-});
+let activeSlideIndex = 0
+
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`
+
+upButton.addEventListener('click', () => changeSlide('up'))
+downButton.addEventListener('click', () => changeSlide('down'))
+
+const changeSlide = (direction) => {
+    const sliderHeight = sliderContainer.clientHeight
+    if(direction === 'up') {
+        activeSlideIndex++
+        if(activeSlideIndex > slidesLength - 1) {
+            activeSlideIndex = 0
+        }
+    } else if(direction === 'down') {
+        activeSlideIndex--
+        if(activeSlideIndex < 0) {
+            activeSlideIndex = slidesLength - 1
+        }
+    }
+
+    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
+    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
+}
