@@ -13,15 +13,17 @@
 <nav class="nav_landing-page top-2">
     <div class="nav-logo-container">
         <img class="nav-logo-image" src="assets/images/CenDash-logo.png" alt="Logo">
-        <h1 class="nav-logo-text">
-          <span>C</span>en<span>D</span>ash
-        </h1>
+        <a href="#home">
+          <h1 class="nav-logo-text">
+            <span>C</span>en<span>D</span>ash
+          </h1>
+        </a>
     </div>
     <div class="nav-item-container">
           <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about" class="active">About</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#services">Marketplace</a></li>
+            <li><a href="#marketplace">Marketplace</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
     </div>
@@ -29,7 +31,7 @@
     <div class="nav-mobile">
         <a href="#about">About</a>
         <a href="#features">Features</a>
-        <a href="#services">Marketplace</a>
+        <a href="#marketplace">Marketplace</a>
         <a href="#contact">Contact Us</a>
     </div>
 
@@ -40,15 +42,15 @@
     </div>
 </nav>
 
-<header class="header">
+<header class="header" id="home">
   <img src="/assets/images/bg-orange.png" alt="" srcset="">
   <section> 
     <div class="header-container">
         <h1 class="header-title top">CenDash</h1>
         <p class="header-description animatedText top-2"></p>
         <div class="button-container bottom">
-          <a href="#main"><button class="btn-1">Visit our Main</button></a>
-          <a href="#main"><button class="btn-2">Learn More</button></a>
+          <a href="/main/index.html"><button class="btn-1">Visit our Main</button></a>
+          <a href="#about"><button class="btn-2">Learn More</button></a>
         </div>
 
           <a href="#main">
@@ -64,6 +66,7 @@
       <div class="about-container">
         <h1 class="top-min-delay" id="main-title">About <span>U</span>s</h1>
         <div class="card left-min-delay">
+          
           <img class="card-background" src="assets/images/about-us/aboutus-mainbg.png" alt="" srcset="">
           <div class="card-content-container">
             <h1 class="card-title">Discover CenDash: <br> Where Dining Becomes an Experience</h1>
@@ -130,11 +133,11 @@
             <p>Join the conversation. Leave reviews and read recommendations from fellow students, making informed choices easier than ever.</p>
           </div>
           <div class="cta-button bottom-min-delay">
-            <a href="#signup" class="button">Start Exploring</a>
+            <a href="/main/index.html" class="button">Start Exploring</a>
           </div>
                                                   
     </section>
-    <section class="services" id="services">
+    <section class="marketplace" id="marketplace">
       <div class="slider-container scale">
         <div class="left-slide">
           <div style="background-color: #fde">

@@ -137,4 +137,25 @@ const changeSlide = (direction) => {
 }
 
 
-// MAPS
+// ========================================================================== //
+// ACTIVE LINKS
+
+
+const sections = document.querySelectorAll('.main section');
+const navLinks = document.querySelectorAll('.nav-item-container ul li a');
+
+window.addEventListener('scroll', () => {
+  const winHeight = window.innerHeight;
+  const offset = 150;
+
+  sections.forEach((section, i) => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop <= winHeight - offset) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLinks[i].classList.add('active');
+    } else {
+      navLinks[i].classList.remove('active');
+    }
+  });
+});
