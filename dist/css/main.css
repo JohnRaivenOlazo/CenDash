@@ -961,9 +961,19 @@ section {
     transform: rotate(0deg);
   }
 }
+@media screen and (min-width: 420px) {
+  .wave {
+    font-size: 0.6em;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wave {
+    font-size: 0.9em;
+  }
+}
 @media screen and (min-width: 768px) {
   .wave {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 992px) {
