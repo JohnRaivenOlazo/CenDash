@@ -133,6 +133,17 @@ body{
     transition: all 0.3s ease;
 }
 
+.nav-item-container li{
+    transition: all 0.3s ease;
+}
+
+.nav-item-container li:hover{
+    transform: translateY(-5px);
+}
+.nav-item-container a:hover{
+    color: rgb(226, 226, 226);
+}
+
 .nav-item-container a.active{
     padding: 10px 15px;
     border-radius: 30px;
