@@ -756,6 +756,7 @@ section{
         margin-top: 20px;
         padding: 0.8rem;
         height: auto;
+        text-align: center;
     
     }
     
@@ -812,12 +813,13 @@ section{
     .card {
         height: auto;
         padding: 1rem;
+        align-items: center;
     
     }
 
     .card-background {
-        max-width: 100%;
-        height: auto;
+        height: 250px;
+        width: 400px;
         display: inline-block;
         background-size: contain;
         background-position: center;
@@ -834,6 +836,7 @@ section{
         font-size: 1.2rem;
         margin-top: 20px;
         padding: 0.8rem;
+        text-align: center;
     
     }
     
@@ -897,8 +900,8 @@ section{
     }
 
     .card-background {
-        max-width: 100%;
-        height: auto;
+        height: 400px;
+        width: 300px;
         display: inline-block;
         background-size: contain;
         background-position: center;
@@ -924,8 +927,114 @@ section{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         margin-top: 20px;
         height: auto;
+        width: auto;
         align-items: center;
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
+        color: #fff;
+        background-color: #942071; 
+        border-radius: 1rem; 
+        box-shadow: 0 4px 8px rgba(253, 1, 178, 0.4);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-description p{
+        font-size: 1.1rem;
+    }
+
+    .card-description h1{
+        font-size: 1.3rem;
+    }
+    
+    .card-description span{
+        font-size: 1.6rem;
+    }
+    
+    .card .card-title{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    #main-title{
+        margin-top: 20px;
+        font-size: 3rem;
+        text-shadow: 1px 2px 5px #bb188b;
+        text-transform: uppercase;
+    }
+    
+    #main-title span{
+        position: relative;
+        font-size: 3.5rem;
+    }
+    
+    #main-title span::before{
+        height: 140px;
+        width: 140px;
+        left: 2px;
+        top: -45px;
+    }
+    
+    #main-title span::after{
+        height: 140px;
+        width: 140px;
+        left: 28px;
+        top: -45px;
+    }
+
+    .about{
+        padding: 1.1rem 1.1rem;
+        height: auto;
+    }
+    .about-container {
+        position: relative;
+        border-radius: 50%;
+        background-color: #ff9068;
+        gap: 50px;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+    
+    .card {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .card-background {
+        height: 500px;
+        width: 400px;
+        display: inline-block;
+        background-size: contain;
+        background-position: center;
+        transition: all 0.3s ease;
+
+        &:hover{
+            transform: scale(1.05);
+
+        }
+    }
+
+    .card-content-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 2rem;
+    }
+
+    .card-description{
+        text-align: left;
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 20px;
+        height: auto;
+        width: auto;
+        align-items: center;
+        padding: 1rem 1rem;
         color: #fff;
         background-color: #942071; 
         border-radius: 1rem; 
@@ -948,7 +1057,6 @@ section{
     .card .card-title{
         font-size: 2rem;
     }
-    
 }
 
 // ========================================================================== //
@@ -977,10 +1085,16 @@ section{
 }
 
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .wave {
+        font-size: 1.3em;
       }
-    
+  }
+
+  @media screen and (min-width: 992px) {
+    .wave {
+        font-size: 1.5em;
+      }
   }
 // ========================================================================== //
 // FEATURES
