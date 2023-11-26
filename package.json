@@ -13,11 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "emailjs-com": "^3.2.0",
+    "sass": "^1.69.5",
     "scrollreveal": "^4.0.9",
     "vite": "^5.0.2"
   },
   "devDependencies": {
-    "node-sass": "^9.0.0",
-    "sass": "^1.69.5"
+    "node-sass": "^9.0.0"
   }
 }
