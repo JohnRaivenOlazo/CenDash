@@ -65,8 +65,12 @@ body {
 }
 
 .nav_landing-page.active {
-  background-color: rgba(255, 119, 28, 0.2117647059);
+  background-color: rgba(255, 119, 28, 0.6588235294);
   padding: 5px 20px;
+}
+
+.nav_landing-page.active a {
+  color: #000;
 }
 
 .nav-logo-container {
@@ -141,7 +145,7 @@ body {
 .nav-item-container a.active {
   padding: 10px 15px;
   border-radius: 30px;
-  background-color: #ff5900;
+  background-color: #ff6918;
   color: #ffffff;
 }
 
@@ -584,13 +588,13 @@ body {
 }
 
 .about-container {
+  display: flex;
   position: relative;
   gap: 20px;
   border-radius: 50%;
   background: linear-gradient(to right, #e3513f, #ed602b);
   height: 100%;
   padding: 2rem 1rem;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -602,7 +606,7 @@ body {
   text-align: center;
   flex-direction: column;
   color: #fff;
-  background: #ff591c;
+  background: #ff5d23;
   padding: 1rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
@@ -684,7 +688,6 @@ body {
   }
   .card {
     height: auto;
-    padding: 1rem;
   }
   .card-description {
     font-size: 1rem;
@@ -734,7 +737,6 @@ body {
   }
   .card {
     height: auto;
-    padding: 1rem;
     align-items: center;
   }
   .card-background {
@@ -800,10 +802,12 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 1rem;
+  }
+  .card:nth-child(odd) {
+    flex-direction: row-reverse;
   }
   .card-background {
-    height: 400px;
+    height: auto;
     width: 300px;
     display: inline-block;
     background-size: contain;
@@ -868,7 +872,7 @@ body {
     top: -45px;
   }
   .about {
-    padding: 1.1rem 1.1rem;
+    padding: 1.1rem 2rem;
     height: auto;
   }
   .about-container {
@@ -883,10 +887,9 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 1rem;
   }
   .card-background {
-    height: 500px;
+    height: auto;
     width: 450px;
     display: inline-block;
     background-size: contain;
@@ -1004,6 +1007,7 @@ body {
 .features #main-title {
   font-family: "Quicksand", sans-serif;
   color: white;
+  text-shadow: 1px 2px 5px #bb188b;
   font-weight: 900;
   margin-top: 3rem;
   font-size: 3rem;
@@ -1197,8 +1201,8 @@ button:focus {
 #contact {
   font-family: "Quicksand", sans-serif;
   scroll-margin-top: 50px;
-  margin: 1.2rem;
-  padding: 1rem;
+  margin: 2rem;
+  padding: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;

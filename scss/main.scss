@@ -86,9 +86,13 @@ body{
 }
 
 .nav_landing-page.active {
-    background-color: #ff771c36;
+    background-color: #ff771ca8;
     padding: 5px 20px;
     //backdrop-filter: blur(4px);
+}
+
+.nav_landing-page.active a{
+    color: #000;
 }
 
 
@@ -165,7 +169,7 @@ body{
 .nav-item-container a.active{
     padding: 10px 15px;
     border-radius: 30px;
-    background-color: #ff5900;
+    background-color: #ff6918;
     color: #ffffff;
 }
 
@@ -654,13 +658,13 @@ body{
     height: 150vh;
 }
 .about-container {
+    display: flex;
     position: relative;
     gap: 20px;
     border-radius: 50%;
     background: $linear-gradient;
     height: 100%;
     padding: 2rem 1rem;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -672,7 +676,7 @@ body{
     text-align: center;
     flex-direction: column;
     color: #fff;
-    background: #ff591c;
+    background: #ff5d23;
     padding: 1rem; 
     border-radius: 1rem; 
     transition: all 0.3s ease-in-out; 
@@ -761,8 +765,6 @@ body{
     
     .card {
         height: auto;
-        padding: 1rem;
-    
     }
     
     .card-description{
@@ -824,7 +826,6 @@ body{
     
     .card {
         height: auto;
-        padding: 1rem;
         align-items: center;
     
     }
@@ -905,11 +906,14 @@ body{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding: 1rem;
+    }
+
+    .card:nth-child(odd){
+        flex-direction: row-reverse;
     }
 
     .card-background {
-        height: 400px;
+        height: auto;
         width: 300px;
         display: inline-block;
         background-size: contain;
@@ -988,7 +992,7 @@ body{
     }
 
     .about{
-        padding: 1.1rem 1.1rem;
+        padding: 1.1rem 2rem;
         height: auto;
     }
     .about-container {
@@ -1004,11 +1008,10 @@ body{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding: 1rem;
     }
 
     .card-background {
-        height: 500px;
+        height: auto;
         width: 450px;
         display: inline-block;
         background-size: contain;
@@ -1129,6 +1132,7 @@ body{
 .features #main-title{
     font-family: 'Quicksand', sans-serif;
     color: white;
+    text-shadow: 1px 2px 5px #bb188b;
     font-weight: 900;
     margin-top: 3rem;
     font-size: 3rem;
@@ -1336,8 +1340,8 @@ $linear-gradient: linear-gradient(to right, #e3513f, #ed602b);
 #contact {
   font-family: 'Quicksand', sans-serif;
   scroll-margin-top: 50px;
-  margin: 1.2rem;
-  padding: 1rem;
+  margin: 2rem;
+  padding: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
