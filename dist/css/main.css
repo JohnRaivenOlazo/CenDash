@@ -1194,4 +1194,137 @@ button:focus {
   border-radius: 10px;
 }
 
+#contact {
+  font-family: "Quicksand", sans-serif;
+  scroll-margin-top: 50px;
+  margin: 1.2rem;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  height: auto;
+  background: linear-gradient(to right, #e3513f, #ed602b);
+  color: #fff;
+}
+#contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#contact img {
+  background-size: cover;
+  width: 200px;
+  height: auto;
+  animation: moveUpDown 2.5s ease-in-out infinite;
+}
+#contact img:hover {
+  animation-play-state: paused;
+}
+#contact h1 {
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+#contact p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contact form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border: 1px solid #0F172A;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+}
+#contact form button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f5b266;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+#contact form button:hover {
+  background-color: #f8ca96;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@media (min-width: 768px) {
+  #contact {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  #contact img {
+    position: relative;
+    background-size: contain;
+    width: 400px;
+    height: auto;
+  }
+}
+@media (min-width: 992px) {
+  #contact {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  #contact img {
+    position: relative;
+    background-size: contain;
+    width: 500px;
+    height: auto;
+  }
+}
+.footer-section {
+  height: auto;
+  position: relative;
+  text-align: center;
+  padding: 25px 20px;
+  padding-top: 30px;
+  background: black;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: white;
+}
+
+.footer-section p a {
+  color: #ed602b;
+  font-size: 15px;
+}
+
 /*# sourceMappingURL=main.css.map */
