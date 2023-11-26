@@ -26,7 +26,7 @@ sr.reveal('.top-min-delay',{
   duration: 1500,
   distance: "20px",
   origin: "top",
-  reset: true
+  reset: false
 });
 
 sr.reveal('.left-min-delay', {
@@ -34,7 +34,7 @@ sr.reveal('.left-min-delay', {
   duration: 1000,
   distance: "50px",
   origin: "left",
-  reset: true,
+  reset: false
 });
 
 sr.reveal('.right-min-delay', {
@@ -42,7 +42,7 @@ sr.reveal('.right-min-delay', {
   duration: 1000,
   distance: "20px",
   origin: "right",
-  reset: true,
+  reset: false
 });
 
 sr.reveal('.bottom-min-delay', {
@@ -51,7 +51,7 @@ sr.reveal('.bottom-min-delay', {
   opacity: 0,
   distance: "50px",
   origin: "bottom",
-  reset: true,
+  reset: false
 });
 
 // BOT
@@ -61,30 +61,39 @@ sr.reveal('.bottom',{
   opacity: 0,
   distance: "20px",
   origin: "bottom",
+  reset: false
+});
+
+sr.reveal('.button-container',{
+  delay: 600,
+  duration: 1500,
+  opacity: 0,
+  distance: "20px",
+  origin: "bottom",
   reset: true
 });
 
 sr.reveal('.scale',{
+  delay: 0,
   opacity: 0,
   scale: 0.5,
   duration: 1000,
-  reset: true
+  origin: "bottom",
+  distance: "5px",
+  reset: false
 });
 
 
 sr.reveal('.opacity',{
+  delay: 0,
   opacity: 0,
   scale: 0.8,
-  duration: 1500,
-  reset: true
+  origin: "bottom",
+  distance: "5px",
+  duration: 1000,
+  reset: false
 });
 
-
-sr.reveal('.text-reveal',{
-  opacity: 0,
-  duration: 1500,
-  reset: true
-});
 
 
 
