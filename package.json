@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "scrollreveal": "^4.0.9",
     "vite": "^5.0.2"
   },

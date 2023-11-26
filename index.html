@@ -6,6 +6,7 @@
     <title>CenDash | Landing Page</title>
     <link rel="stylesheet" href="dist/css/main.css">
     <link rel="icon" href="assets/images/CenDash-logo.png">
+    <script src="/script/email.js" type="module"></script>
 </head>
 <body class="landing-page">
 <!-- ======================================================================= -->
@@ -187,18 +188,17 @@
     <section class="contact scale" id="contact">
         <h1>Get in Touch with CenDash</h1>
         <p>Have a question, suggestion, or just want to say hi? We're all ears! Reach out to us - the CenDash team is here to make your campus dining experience as smooth as your favorite meal.</p>
-        <form>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-          
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-          
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          
-            <button type="submit">Send Message</button>
-          </form>          
+        <form id="emailForm">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+        
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="button" id="sendEmailButton">Send Message</button>
+      </form>       
     </section>
     <footer class="footer-section">
             <p>Copyright &copy; 2023, All Right Reserved <a href="#">CenDash</a></p>
