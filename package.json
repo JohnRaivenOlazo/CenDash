@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "node-sass": "sass -w scss/:css/"
+    "preview": "vite preview",
+    "node-sass": "sass -w src/styles/scss/:src/styles/css/"
   },
   "author": "",
   "license": "ISC",
