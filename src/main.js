@@ -1,6 +1,4 @@
 import "./styles/scss/main.scss";
-import "./styles/scss/test.scss";
-
 
 // ========================================================================== //
 // Apply padding effect when the navbar is leave the scrollY point
