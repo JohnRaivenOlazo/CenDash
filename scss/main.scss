@@ -1141,17 +1141,16 @@ body{
 
 .features{
     background: $linear-gradient;
-    scroll-margin-top: 30px;
+    scroll-margin-top: 20px;
     position: relative;
     height: auto;
 }
 #features {
-    padding: 2.5rem;
+    padding: 1rem;
 }
 
 #features h1 {
     font-family: 'Quicksand', sans-serif;
-    color: $light-text-color;
     font-weight: 900;
     text-align: center;
     margin-bottom: 2rem;
@@ -1160,9 +1159,9 @@ body{
 
 #features p {
     font-size: 1rem;
-    color: $light-text-color;
+    color: #000;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .feature-card {
@@ -1170,13 +1169,19 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #f86969;
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
     margin: 1.1rem;
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    padding-bottom: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
 
     img {
         width: 80px; 
@@ -1185,25 +1190,23 @@ body{
 
     h2 {
         font-family: 'Quicksand', sans-serif;
-        color: $accent-color;
+        color: #e04f00;
         font-size: 1.5rem;
+        font-weight: 800;
         margin-bottom: 0.5rem;
     }
 
     p {
+        font-family: 'Quicksand', sans-serif;
         font-size: 1rem;
-        color: $light-text-color;
-    }
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        color: #000;
     }
 }
 
 .cta-button {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 
     .button {
         display: inline-block;
@@ -1212,10 +1215,9 @@ body{
         font-weight: 600;
         text-align: center;
         text-transform: uppercase;
-        color: $color;
+        color: #fff;
         background-color: rgb(251, 75, 26);
-        border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         cursor: pointer;
         transition: background-color 0.3s ease-in-out;
 
