@@ -31,7 +31,8 @@ CenDash is a full-stack campus dining ordering system exclusively designed for N
 
 ### Deployment
 
-- Vercel
+- Vercel (Landing Page)
+- 000webhost (Main Page)
 
 ## Achievements
 
