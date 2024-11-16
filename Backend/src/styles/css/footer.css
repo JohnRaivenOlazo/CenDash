@@ -1,0 +1,39 @@
+footer {
+  font-weight: 300;
+  color: #f2f2f2;
+  background: linear-gradient(to top, #f78030, orange);
+  padding: 20px;
+  position: relative;
+  align-items: center;
+}
+footer .footer-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .footer-container div {
+  line-height: 25px;
+}
+footer .footer-container div p {
+  font-size: 16px;
+}
+footer .footer-container div p a {
+  color: #fff;
+}
+footer .footer-container div h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-indent: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-container {
+    text-align: right;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

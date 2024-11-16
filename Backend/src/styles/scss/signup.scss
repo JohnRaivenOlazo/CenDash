@@ -1,0 +1,97 @@
+.signup-container {
+    background-image: url("/src/assets/images/header-bg.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+  }
+  
+  .form-module {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: #fff;
+    max-width: 30rem;
+    width: 100%;
+    border-top: 3px solid orange;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      top: 49%;
+    }
+  
+    .form {
+      padding: 20px;
+      padding-bottom: 10px;
+      .container{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        div{
+          width: 100%;
+        }
+      }
+      .popup{
+        padding-bottom: 10px;
+        .error{
+            color: red;
+        }
+    
+        .success{
+            color: green;
+        }
+      }
+
+      label{
+        font-family: 'Lexend', sans-serif;
+      }
+
+      .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  
+    .form-title {
+      font-size: 2.3rem;
+      color: orange;
+      font-weight: 800;
+      text-shadow: 1px 1px #000;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .form-module input {
+    display: block;
+    width: 100%;
+    border: 1px solid #000;
+    margin: 3px 0 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: 0.2s ease;
+    text-align: center;
+  
+    &:focus {
+      border: 1px solid orange;
+      color: #000;
+    }
+  
+  &[type="submit"] {
+    background-color: orange;
+    border: none;
+    color: black;
+  
+    &:hover {
+      background-color: rgb(216, 147, 20);
+      color: white;
+    }
+  }
+  }
+  
+  

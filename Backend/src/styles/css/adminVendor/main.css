@@ -1,0 +1,53 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+.card .card-header {
+  background-color: orange;
+  text-align: center;
+  min-width: 100%;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid orange;
+}
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.card table thead {
+  background-color: #f2f2f2;
+}
+.card table thead th {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+.card table tbody td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.card table tbody td img {
+  width: 150px;
+  height: 100px;
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card table tbody td:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.card table tbody td:hover {
+  background-color: #e5e5e5;
+}
+
+/*# sourceMappingURL=main.css.map */

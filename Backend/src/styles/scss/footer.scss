@@ -1,0 +1,44 @@
+
+footer {
+    font-weight: 300;
+    color: #f2f2f2;
+    background: linear-gradient(to top, #f78030, orange);
+    padding: 20px;
+    position: relative;
+    align-items: center;
+
+    .footer-container{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+
+        div {
+          line-height: 25px;
+        }
+
+        div p {
+          font-size: 16px;
+        }
+
+        div p a {
+          color: #fff;
+        }
+        div h1 {
+          font-size: 2rem;
+          color: #fff;
+          text-indent: 5px;
+          font-family: "Source Sans Pro", sans-serif;
+        }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    footer{
+        .footer-container{
+            text-align: right;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+  }

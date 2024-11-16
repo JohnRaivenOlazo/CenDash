@@ -1,0 +1,63 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+  
+    .card-header {
+      background-color: orange;
+      text-align: center;
+      min-width: 100%;
+      color: #fff;
+      font-weight: 800;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid orange;
+
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  
+      thead {
+        background-color: #f2f2f2;
+  
+        th {
+          padding: 10px;
+          text-align: left;
+          font-weight: bold;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+  
+      tbody {
+        td {
+          padding: 10px;
+          text-align: left;
+          vertical-align: top;
+  
+          img {
+            width:150px;
+            height:100px;
+            max-width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+  
+          &:nth-child(odd) {
+            background-color: #f9f9f9;
+          }
+  
+          &:hover {
+            background-color: #e5e5e5;
+          }
+        }
+      }
+    }
+  }
+  

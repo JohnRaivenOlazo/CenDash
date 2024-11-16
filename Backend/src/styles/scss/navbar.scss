@@ -1,0 +1,259 @@
+$nav-height: 70px;
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: $nav-height;
+  background: linear-gradient(to right, orange, #f78030);
+  border-bottom: 1px solid white;
+  z-index: 9999;
+
+  &.show {
+    .nav-list {
+      display: block;
+      li {
+        a {
+          transform: scale(1.05) translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-title {
+  position: absolute;
+  font-size: 2rem;
+  padding-left: 50px;
+
+  img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 60px;
+    width: 70px;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+    text-shadow: 2px 2px #000;
+    transition: all 0.3s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+nav {
+  float: right;
+
+  .nav-list {
+    transition: all 0.3s ease;
+    li {
+      float: left;
+      position: relative;
+      transition: all 0.2s ease;
+
+      .nav-button {
+        &::after {
+          padding-left: 4px;
+          content: " ▾";
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 39%;
+        left: -3px;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.05) translateY(-2px);
+          color: #f78030;
+        }
+      }
+      a {
+        font-family: 'Lexend', sans-serif;
+        font-weight: 800;
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 1px 1px #000;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05) translateY(-2px);
+        }
+      }
+
+      ul li {
+        min-width: 220px;
+        border-bottom: 1px solid white;
+
+        i {
+          top: 13px;
+          left: 10px;
+        }
+
+        a {
+          padding: 10px 30px 10px 35px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .nav-dropdown {
+    position: absolute;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #fff;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+
+    li {
+      background: linear-gradient(to right, orange, #f78030);
+    }
+
+    &.show {
+      max-height: 250px;
+    }
+  }
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: $nav-height;
+  width: $nav-height;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+
+    .nav-title {
+      top: 9px;
+      padding-left: 40px;
+
+      h1 {
+        font-size: 2rem;
+      }
+      img {
+        top: -2px;
+        left: 5px;
+        height: 50px;
+        width: 60px;
+      }
+    }
+
+    .nav-list {
+      margin-top: 4.3rem;
+      opacity: 0;
+      transform: translateY(-200%);
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      li {
+        background: linear-gradient(to right, orange, #f78030);
+        float: none;
+
+        i {
+          top: 18px;
+          left: 7px;
+          &:hover {
+            transform: scale(1.05) translateY(-2px);
+          }
+        }
+
+        a {
+          padding: 15px 30px;
+          line-height: 20px;
+          &:hover {
+            transform: scale(1) translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+
+  .nav-button {
+    margin-left: 50px;
+  }
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+
+  span,
+  span:before,
+  span:after {
+    content: "";
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 30px;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  span:before {
+    top: -10px;
+  }
+
+  span:after {
+    bottom: -10px;
+  }
+
+  &.active span {
+    background-color: transparent;
+
+    &:before,
+    &:after {
+      top: 0;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

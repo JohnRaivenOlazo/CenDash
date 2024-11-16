@@ -1,0 +1,222 @@
+@charset "UTF-8";
+.nav {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, orange, #f78030);
+  border-bottom: 1px solid white;
+  z-index: 9999;
+}
+.nav.show .nav-list {
+  display: block;
+}
+.nav.show .nav-list li a {
+  transform: scale(1.05) translateY(-2px);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-title {
+  position: absolute;
+  font-size: 2rem;
+  padding-left: 50px;
+}
+.nav-title img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 60px;
+  width: 70px;
+}
+.nav-title h1 {
+  color: white;
+  font-weight: 600;
+  margin-left: 20px;
+  text-shadow: 2px 2px #000;
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-title h1:hover {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+nav .nav-list {
+  transition: all 0.3s ease;
+}
+nav .nav-list li {
+  float: left;
+  position: relative;
+  transition: all 0.2s ease;
+}
+nav .nav-list li .nav-button::after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav .nav-list li i {
+  position: absolute;
+  top: 39%;
+  left: -3px;
+  transition: all 0.3s ease;
+}
+nav .nav-list li i:hover {
+  transform: scale(1.05) translateY(-2px);
+  color: #f78030;
+}
+nav .nav-list li a {
+  font-family: "Lexend", sans-serif;
+  font-weight: 800;
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+nav .nav-list li a:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+nav .nav-list li ul li {
+  min-width: 220px;
+  border-bottom: 1px solid white;
+}
+nav .nav-list li ul li i {
+  top: 13px;
+  left: 10px;
+}
+nav .nav-list li ul li a {
+  padding: 10px 30px 10px 35px;
+  line-height: 20px;
+}
+nav .nav-dropdown {
+  position: absolute;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #fff;
+  border-top: none;
+  border-bottom: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+}
+nav .nav-dropdown li {
+  background: linear-gradient(to right, orange, #f78030);
+}
+nav .nav-dropdown.show {
+  max-height: 250px;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 70px;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+  }
+  nav .nav-title {
+    top: 9px;
+    padding-left: 40px;
+  }
+  nav .nav-title h1 {
+    font-size: 2rem;
+  }
+  nav .nav-title img {
+    top: -2px;
+    left: 5px;
+    height: 50px;
+    width: 60px;
+  }
+  nav .nav-list {
+    margin-top: 4.3rem;
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  nav .nav-list.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  nav .nav-list li {
+    background: linear-gradient(to right, orange, #f78030);
+    float: none;
+  }
+  nav .nav-list li i {
+    top: 18px;
+    left: 7px;
+  }
+  nav .nav-list li i:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
+  nav .nav-list li a {
+    padding: 15px 30px;
+    line-height: 20px;
+  }
+  nav .nav-list li a:hover {
+    transform: scale(1) translateY(-2px);
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+  .nav-button {
+    margin-left: 50px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  content: "";
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 30px;
+  border-radius: 5px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  transition: all 0.3s ease;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/*# sourceMappingURL=navbar.css.map */
